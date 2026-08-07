@@ -1,0 +1,210 @@
+// 1. Simple Push-Down Mobile Dropdown
+window.openMobileDropdown = function() {
+  const dropdown = document.getElementById('mobile-dropdown');
+  const menuIcon = document.getElementById('menu-icon');
+  const mainContent = document.querySelector('main');
+  if (!dropdown) return;
+  dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+  if (menuIcon) menuIcon.textContent = 'close';
+  // Push main content down
+  if (mainContent) {
+    mainContent.style.transition = 'padding-top 0.3s ease';
+    mainContent.style.paddingTop = (44 + dropdown.scrollHeight) + 'px';
+  }
+};
+
+window.closeMobileDropdown = function() {
+  const dropdown = document.getElementById('mobile-dropdown');
+  const menuIcon = document.getElementById('menu-icon');
+  const mainContent = document.querySelector('main');
+  if (!dropdown) return;
+  dropdown.style.maxHeight = '0';
+  if (menuIcon) menuIcon.textContent = 'menu';
+  // Reset main content padding
+  if (mainContent) {
+    mainContent.style.transition = 'padding-top 0.3s ease';
+    mainContent.style.paddingTop = '';
+  }
+};
+
+window.toggleMobileDropdown = function() {
+  const dropdown = document.getElementById('mobile-dropdown');
+  if (!dropdown) return;
+  if (parseInt(dropdown.style.maxHeight) > 0) {
+    window.closeMobileDropdown();
+  } else {
+    window.openMobileDropdown();
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // 0. Navbar Scroll Background & Active Link Highlight
+  const mainNav = document.getElementById('main-nav');
+  const navLinks = document.querySelectorAll('#main-nav nav a');
+  const sections = document.querySelectorAll('section[id]');
+
+  function handleNavbarScroll() {
+    if (!mainNav) return;
+    if (window.scrollY > 20) {
+      mainNav.classList.add('scrolled');
+    } else {
+      mainNav.classList.remove('scrolled');
+    }
+
+    let currentSectionId = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href === `#${currentSectionId}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+  handleNavbarScroll();
+
+  // Mobile Menu Button
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.toggleMobileDropdown();
+    });
+  }
+
+  // Close dropdown when clicking a link inside it
+  const dropdown = document.getElementById('mobile-dropdown');
+  if (dropdown) {
+    const links = dropdown.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        window.closeMobileDropdown();
+      });
+    });
+  }
+
+  // Close on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) window.closeMobileDropdown();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') window.closeMobileDropdown();
+  });
+
+  // 2. Portfolio Category Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      portfolioItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'all' || filter === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 3. Lightbox Modal Preview
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxCat = document.getElementById('lightbox-cat');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  function openLightbox(imgSrc, title, cat) {
+    if (!lightboxModal) return;
+    lightboxImg.src = imgSrc;
+    lightboxTitle.textContent = title;
+    lightboxCat.textContent = cat;
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  portfolioItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img').getAttribute('src');
+      const title = item.querySelector('h3').textContent;
+      const cat = item.querySelector('span').textContent;
+      openLightbox(img, title, cat);
+    });
+  });
+
+  const featuredWorkBox = document.getElementById('featured-work-box');
+  if (featuredWorkBox) {
+    featuredWorkBox.addEventListener('click', () => {
+      const img = featuredWorkBox.querySelector('img').getAttribute('src');
+      openLightbox(img, 'Special Digital Illustration', 'Featured Masterpiece Spotlight');
+    });
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // 4. Contact Form Handling
+  const contactForm = document.getElementById('contact-form');
+  const toast = document.getElementById('toast');
+
+  function showToast(msg) {
+    if (!toast) return;
+    const toastText = document.getElementById('toast-text');
+    if (toastText) toastText.textContent = msg;
+    toast.classList.remove('translate-y-32', 'opacity-0');
+    setTimeout(() => {
+      toast.classList.add('translate-y-32', 'opacity-0');
+    }, 4000);
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-base">progress_activity</span> Mengirim...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        contactForm.reset();
+        showToast('Terima kasih! Pesan Anda telah terkirim ke Khoiruman.');
+      }, 1000);
+    });
+  }
+
+});
