@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (videoEl) {
         const sourceEl = videoEl.querySelector('source');
-        const videoSrc = sourceEl ? sourceEl.getAttribute('src') : (videoEl.getAttribute('src') || 'vidio_motion_logo.webm');
+        const videoSrc = sourceEl ? sourceEl.getAttribute('src') : (videoEl.getAttribute('src') || 'videos/motion_logo.webm');
         openLightbox(videoSrc, title, cat, true);
       } else if (imgEl) {
         const imgSrc = imgEl.getAttribute('src');
