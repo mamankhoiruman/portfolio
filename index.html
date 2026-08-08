@@ -285,7 +285,7 @@
           <!-- Mobile: Compact Horizontal Profile Card -->
           <div class="flex lg:hidden items-center gap-4 bg-surface rounded-2xl p-3 pr-5 ambient-shadow border border-emerald-100 w-full">
             <div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 border border-emerald-100">
-              <img class="w-full h-full object-cover" alt="Khoiruman Portrait" src="avatar.webp"/>
+              <img class="w-full h-full object-cover" alt="Khoiruman Portrait" src="profile.webp"/>
             </div>
             <div class="flex flex-col gap-0.5">
               <h2 class="font-headline text-base font-bold text-dark-charcoal leading-tight">Khoiruman</h2>
@@ -303,7 +303,7 @@
 
           <!-- Desktop: Large Square Portrait -->
           <div class="hidden lg:block w-full max-w-[360px] aspect-square bg-surface-container rounded-2xl overflow-hidden ambient-shadow relative border border-emerald-100 group">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Khoiruman Portrait Designer" src="avatar.webp"/>
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Khoiruman Portrait Designer" src="profile.webp"/>
             
             <!-- Overlay Badges (Desktop only) -->
             <div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md border border-emerald-200/60 rounded-xl p-2.5 shadow-md flex items-center gap-2.5">
@@ -345,6 +345,7 @@
         <!-- Category Filters (Flex Wrap Pill Buttons - No Horizontal Scroll) -->
         <div class="flex flex-wrap gap-2 sm:gap-2.5 font-headline text-xs tracking-wider uppercase w-full md:w-auto" id="filter-container">
           <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="motion-graphics">Motion Logo</button>
           <button class="filter-btn" data-filter="jersey-apparel">Jersey & Apparel</button>
           <button class="filter-btn" data-filter="book-illustration">Book Cover</button>
           <button class="filter-btn" data-filter="human-vector">Human Vector</button>
@@ -356,6 +357,27 @@
 
       <!-- Portfolio Grid (2 Columns on Mobile) -->
       <div class="grid grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6" id="portfolio-grid">
+
+        <!-- Motion Logo Video -->
+        <div class="portfolio-item group cursor-pointer bg-surface rounded-xl overflow-hidden border border-outline-variant/30 ambient-shadow transition-all duration-500 hover:-translate-y-1.5" data-category="motion-graphics social-branding">
+          <div class="aspect-[4/3] overflow-hidden relative bg-surface-container flex items-center justify-center">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <source src="vidio_motion_logo.webm" type="video/webm">
+              <source src="vidio_motion_logo.mp4" type="video/mp4">
+              Browser Anda tidak mendukung video HTML5.
+            </video>
+            <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+                <i class="fas fa-play"></i>
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Motion Graphics & Logo</span>
+            <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Animated Motion Logo</h3>
+            <p class="font-body text-xs text-on-surface-variant">Animasi logo bergerak sinematik & identitas merek visual.</p>
+          </div>
+        </div>
 
         <!-- Jersey 1 -->
         <div class="portfolio-item group cursor-pointer bg-surface rounded-xl overflow-hidden border border-outline-variant/30 ambient-shadow transition-all duration-500 hover:-translate-y-1.5" data-category="jersey-apparel">
@@ -1413,6 +1435,7 @@
 
     <div class="max-w-4xl max-h-[85vh] flex flex-col items-center text-center">
       <img src="" alt="Full Preview" id="lightbox-img" class="max-h-[75vh] max-w-full object-contain rounded-xl shadow-2xl mb-4"/>
+      <video id="lightbox-video" autoplay loop muted playsinline class="max-h-[75vh] max-w-full object-contain rounded-xl shadow-2xl mb-4 hidden"></video>
       <h3 class="font-headline text-xl font-bold text-white mb-1" id="lightbox-title">Title</h3>
       <p class="font-body text-sm text-emerald-400 font-medium" id="lightbox-cat">Category</p>
     </div>

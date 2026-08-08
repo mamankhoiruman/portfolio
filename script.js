@@ -115,8 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.getAttribute('data-filter');
 
       portfolioItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || filter === category) {
+        const category = item.getAttribute('data-category') || '';
+        const categories = category.split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
           item.style.display = 'block';
         } else {
           item.style.display = 'none';
@@ -128,31 +129,62 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Lightbox Modal Preview
   const lightboxModal = document.getElementById('lightbox-modal');
   const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxVideo = document.getElementById('lightbox-video');
   const lightboxTitle = document.getElementById('lightbox-title');
   const lightboxCat = document.getElementById('lightbox-cat');
   const lightboxClose = document.getElementById('lightbox-close');
 
-  function openLightbox(imgSrc, title, cat) {
+  function openLightbox(mediaSrc, title, cat, isVideo = false) {
     if (!lightboxModal) return;
-    lightboxImg.src = imgSrc;
-    lightboxTitle.textContent = title;
-    lightboxCat.textContent = cat;
+    if (isVideo) {
+      if (lightboxImg) lightboxImg.classList.add('hidden');
+      if (lightboxVideo) {
+        lightboxVideo.classList.remove('hidden');
+        lightboxVideo.src = mediaSrc;
+        lightboxVideo.play().catch(() => {});
+      }
+    } else {
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.classList.add('hidden');
+        lightboxVideo.removeAttribute('src');
+      }
+      if (lightboxImg) {
+        lightboxImg.classList.remove('hidden');
+        lightboxImg.src = mediaSrc;
+      }
+    }
+    if (lightboxTitle) lightboxTitle.textContent = title;
+    if (lightboxCat) lightboxCat.textContent = cat;
     lightboxModal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     if (!lightboxModal) return;
+    if (lightboxVideo) {
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute('src');
+    }
     lightboxModal.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
 
   portfolioItems.forEach(item => {
     item.addEventListener('click', () => {
-      const img = item.querySelector('img').getAttribute('src');
-      const title = item.querySelector('h3').textContent;
-      const cat = item.querySelector('span').textContent;
-      openLightbox(img, title, cat);
+      const imgEl = item.querySelector('img');
+      const videoEl = item.querySelector('video');
+      const title = item.querySelector('h3') ? item.querySelector('h3').textContent : '';
+      const cat = item.querySelector('span') ? item.querySelector('span').textContent : '';
+
+      if (videoEl) {
+        const sourceEl = videoEl.querySelector('source');
+        const videoSrc = sourceEl ? sourceEl.getAttribute('src') : (videoEl.getAttribute('src') || 'vidio_motion_logo.webm');
+        openLightbox(videoSrc, title, cat, true);
+      } else if (imgEl) {
+        const imgSrc = imgEl.getAttribute('src');
+        openLightbox(imgSrc, title, cat, false);
+      }
     });
   });
 

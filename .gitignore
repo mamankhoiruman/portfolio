@@ -1,0 +1,8 @@
+# Binary tools & temporary archives
+ffmpeg.exe
+ffmpeg.zip
+cwebp.zip
+cwebp_dir/
+
+# Raw uncompressed video files (web versions .webm and .mp4 are tracked)
+vidio_motion_logo.mov
