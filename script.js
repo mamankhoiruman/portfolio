@@ -216,8 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
   certItems.forEach(item => {
     item.addEventListener('click', () => {
       const imgEl = item.querySelector('img');
-      const title = item.querySelector('h3') ? item.querySelector('h3').textContent : 'Sertifikat Keahlian';
-      const cat = item.querySelector('.cert-category') ? item.querySelector('.cert-category').textContent : 'Sertifikasi';
+      const title = item.querySelector('h3') ? item.querySelector('h3').textContent : 'Professional Certification';
+      const cat = item.querySelector('.cert-category') ? item.querySelector('.cert-category').textContent : 'Credentials';
 
       if (imgEl) {
         const imgSrc = imgEl.getAttribute('src');
