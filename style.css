@@ -28,11 +28,11 @@
   --border-subtle: #e2e8f0;
   --border-variant: #c4c7c7;
 
-  /* Crisp Neumorphic Dual-Shadow System */
-  --neu-flat-shadow: 6px 6px 16px rgba(0, 0, 0, 0.05), -6px -6px 16px #ffffff;
-  --neu-pressed-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.05), inset -3px -3px 6px #ffffff;
-  --neu-hover-shadow: 10px 10px 24px rgba(16, 185, 129, 0.15), -6px -6px 18px #ffffff;
-  --neu-sm-shadow: 4px 4px 10px rgba(0, 0, 0, 0.04), -4px -4px 10px #ffffff;
+  /* Crisp Natural Soft Ambient Shadow System */
+  --neu-flat-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --neu-pressed-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+  --neu-hover-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08), 0 6px 16px -4px rgba(0, 0, 0, 0.04);
+  --neu-sm-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   --radius-lg: 20px;
   --radius-full: 9999px;
 }
@@ -130,17 +130,17 @@ img {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  border-bottom: 1px solid transparent !important;
+  border-bottom: none !important;
   box-shadow: none !important;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
 #main-nav.scrolled {
   background: #ffffff !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(196, 199, 199, 0.3) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Desktop Navbar Nav Links */
@@ -201,19 +201,19 @@ main section:first-of-type {
 /* Profile Avatar Wrapper & Dual Ring Neumorphic Rim */
 main section:first-of-type .lg\:col-span-5 .aspect-square {
   border-radius: 24px;
-  border: 4px solid #ffffff;
-  box-shadow: 0 16px 36px rgba(16, 185, 129, 0.14), var(--neu-flat-shadow);
+  border: none !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
 
 main section:first-of-type .lg\:col-span-5 .aspect-square:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 26px 52px rgba(16, 185, 129, 0.22), var(--neu-hover-shadow);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.09);
 }
 
 /* Quick Stats Container */
 main section:first-of-type .grid-cols-3 {
-  border-top: 1px solid rgba(196, 199, 199, 0.3);
+  border-top: none !important;
   padding-top: 12px;
 }
 
@@ -251,12 +251,13 @@ main section:first-of-type .grid-cols-3 {
 #certificates .bg-surface,
 #services .bg-surface,
 #about .bg-surface,
-#contact .bg-surface {
+#contact .bg-surface,
+.hero-brand-card {
   background-color: #ffffff !important;
-  border: 1px solid rgba(16, 185, 129, 0.18) !important;
+  border: none !important;
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.05), var(--neu-sm-shadow) !important;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease !important;
 }
 
 .ambient-shadow:hover,
@@ -266,10 +267,11 @@ main section:first-of-type .grid-cols-3 {
 #certificates .bg-surface:hover,
 #services .bg-surface:hover,
 #about .bg-surface:hover,
-#contact a.bg-surface:hover {
-  transform: translateY(-6px) !important;
-  border-color: rgba(16, 185, 129, 0.45) !important;
-  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.14), var(--neu-hover-shadow) !important;
+#contact a.bg-surface:hover,
+.hero-brand-card:hover {
+  transform: translateY(-5px) !important;
+  border: none !important;
+  box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.08), 0 6px 16px -4px rgba(0, 0, 0, 0.03) !important;
 }
 
 /* --- 6. CATEGORY FILTER BUTTONS --- */
@@ -277,26 +279,27 @@ main section:first-of-type .grid-cols-3 {
   padding: 8px 18px !important;
   border-radius: 9999px !important;
   background: #ffffff !important;
-  border: 1px solid rgba(196, 199, 199, 0.4) !important;
+  border: none !important;
   color: var(--text-muted) !important;
   font-size: 11px !important;
   font-weight: 600 !important;
   letter-spacing: 0.05em !important;
-  box-shadow: var(--neu-sm-shadow) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
   transition: all 0.25s ease !important;
 }
 
 .filter-btn:hover {
   color: var(--primary) !important;
-  border-color: rgba(16, 185, 129, 0.4) !important;
-  background: rgba(16, 185, 129, 0.05) !important;
+  background: rgba(16, 185, 129, 0.08) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
 }
 
 .filter-btn.active {
   background: var(--primary) !important;
   color: #ffffff !important;
-  border-color: var(--primary) !important;
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.32) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25) !important;
 }
 
 /* --- 7. BADGES & SOCIAL BUTTONS --- */
@@ -306,21 +309,20 @@ main section:first-of-type .grid-cols-3 {
   gap: 8px;
   padding: 6px 14px;
   background: #ffffff;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: none !important;
   border-radius: 9999px;
   font-size: 0.8rem;
   font-weight: 600;
   color: #059669;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease;
 }
 
 .focus-badge:hover, .skill-badge:hover {
   background: #10b981;
   color: #ffffff;
-  border-color: #10b981;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .social-btn {
@@ -332,9 +334,9 @@ main section:first-of-type .grid-cols-3 {
   border-radius: 12px;
   background-color: #ffffff;
   color: #1b1c1c;
-  border: 1px solid rgba(196, 199, 199, 0.4);
+  border: none !important;
   font-size: 1.1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
@@ -342,9 +344,8 @@ main section:first-of-type .grid-cols-3 {
 .social-btn:hover {
   background-color: #10b981;
   color: #ffffff;
-  border-color: #10b981;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 18px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* --- 8. BUTTONS & FORM CONTROLS --- */
@@ -353,6 +354,7 @@ button[type="submit"],
 .bg-primary {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
   box-shadow: 0 6px 20px rgba(16, 185, 129, 0.28) !important;
+  border: none !important;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
 }
 
@@ -363,25 +365,39 @@ button[type="submit"]:hover,
   box-shadow: 0 10px 28px rgba(16, 185, 129, 0.38) !important;
 }
 
+/* Back to Top Button */
+#back-to-top {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+  cursor: pointer;
+  z-index: 40;
+}
+
+#back-to-top:hover {
+  transform: translateY(-4px) scale(1.08) !important;
+  box-shadow: 0 14px 30px rgba(16, 185, 129, 0.45), 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
 /* Form Controls */
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
   background-color: #fbf9f9 !important;
-  border: 1px solid rgba(196, 199, 199, 0.5) !important;
+  border: none !important;
   border-radius: 12px !important;
   padding: 14px 18px !important;
   font-size: 14px !important;
   color: var(--text-main) !important;
-  box-shadow: var(--neu-pressed-shadow) !important;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03), inset 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  transition: box-shadow 0.2s ease !important;
 }
 
 #contact-form input:focus,
 #contact-form select:focus,
 #contact-form textarea:focus {
-  border-color: var(--primary) !important;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18) !important;
+  border: none !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35), inset 0 1px 3px rgba(0, 0, 0, 0.04) !important;
   outline: none !important;
 }
 
@@ -444,9 +460,9 @@ button[type="submit"]:hover,
   max-width: calc(100vw - 32px);
   max-height: calc(100dvh - 80px);
   background: #ffffff !important;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: none !important;
   border-radius: 20px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18), 0 4px 16px rgba(16, 185, 129, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(16, 185, 129, 0.08);
   z-index: 2010 !important;
   transform: translateY(-12px) scale(0.95);
   opacity: 0;
@@ -612,33 +628,40 @@ body.drawer-open #mobile-menu-btn {
     font-size: 0.72rem !important;
   }
 
-  /* Portfolio Grid Penataan Mobile - 2 Columns (Side-by-side) */
+  /* Portfolio Grid Penataan Mobile - 3 Columns (Side-by-side) */
   #portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
   }
 
   .portfolio-item {
-    border-radius: 14px !important;
+    border-radius: 12px !important;
   }
 
   .portfolio-item .p-6 {
-    padding: 10px 12px !important;
+    padding: 8px 10px !important;
   }
 
   .portfolio-item h3 {
-    font-size: 0.82rem !important;
+    font-size: 0.76rem !important;
     line-height: 1.25 !important;
     margin-bottom: 2px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
   .portfolio-item p {
-    font-size: 0.72rem !important;
-    line-height: 1.3 !important;
+    display: none !important;
   }
 
   .portfolio-item span {
-    font-size: 0.65rem !important;
+    font-size: 0.6rem !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
   /* Work Experience Penataan Mobile */
@@ -646,16 +669,74 @@ body.drawer-open #mobile-menu-btn {
     gap: 16px !important;
   }
 
-  /* Software Tools Penataan Mobile (2 Columns) */
+  /* Software Tools Penataan Mobile (3 Columns) */
   #skills .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
   }
 
-  /* Services Penataan Mobile */
+  #skills .bg-surface {
+    padding: 12px 6px !important;
+    border-radius: 12px !important;
+  }
+
+  #skills .w-16.h-16 {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 6px !important;
+    margin-bottom: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  #skills h3 {
+    font-size: 0.72rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 2px !important;
+  }
+
+  #skills p {
+    font-size: 0.58rem !important;
+    line-height: 1.2 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* Services Penataan Mobile (Compact 2x2 Bento Grid) */
+  #services {
+    padding-top: 2.2rem !important;
+    padding-bottom: 2.2rem !important;
+  }
+
+  #services .text-center {
+    margin-bottom: 1.5rem !important;
+  }
+
   #services .grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  #services .bg-surface {
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+  }
+
+  #services .material-symbols-outlined {
+    font-size: 1.6rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  #services h3 {
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 3px !important;
+  }
+
+  #services p {
+    font-size: 0.65rem !important;
+    line-height: 1.3 !important;
   }
 
   /* Contact Section Penataan Mobile */
@@ -715,7 +796,7 @@ body.drawer-open #mobile-menu-btn {
   justify-content: center !important;
   padding: 6px 14px !important;
   border-radius: 9999px !important;
-  border: 1px solid rgba(196, 199, 199, 0.45) !important;
+  border: none !important;
   background-color: #ffffff !important;
   color: #444748 !important;
   font-size: 0.72rem !important;
@@ -726,7 +807,6 @@ body.drawer-open #mobile-menu-btn {
 }
 
 .filter-btn:hover {
-  border-color: #10b981 !important;
   color: #059669 !important;
   transform: translateY(-1px) !important;
 }
@@ -734,7 +814,7 @@ body.drawer-open #mobile-menu-btn {
 .filter-btn.active {
   background-color: #10b981 !important;
   color: #ffffff !important;
-  border-color: #10b981 !important;
+  border: none !important;
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25) !important;
 }
 

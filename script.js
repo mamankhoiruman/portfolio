@@ -69,10 +69,33 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.remove('active');
       }
     });
+
+    // Back to Top Button visibility
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      if (window.scrollY > 350) {
+        backToTopBtn.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      } else {
+        backToTopBtn.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      }
+    }
   }
 
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
   handleNavbarScroll();
+
+  // Back to Top Click Action
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
   // Mobile Menu Button
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
