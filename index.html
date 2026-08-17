@@ -20,21 +20,21 @@
   <!-- Google Material Symbols & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=2.0">
+  <link rel="stylesheet" href="style.css?v=3.0">
   
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
-          colours: {
+          colors: {
             "background": "#fbf9f9",
             "surface": "#ffffff",
             "surface-container": "#efeded",
             "surface-variant": "#e3e2e2",
-            "primary": "#10b981",
-            "primary-dark": "#059669",
-            "primary-light": "#34d399",
+            "primary": "#1A2530",
+            "primary-dark": "#101820",
+            "primary-light": "#2c3e50",
             "on-primary": "#ffffff",
             "dark-charcoal": "#1e1e1e",
             "on-background": "#1b1c1c",
@@ -94,15 +94,15 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
     .filter-btn:hover {
-      color: #059669;
+      color: #101820;
       transform: translateY(-1px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
     .filter-btn.active {
-      background-color: #10b981 !important;
+      background-color: #1A2530 !important;
       color: #ffffff !important;
       border: none !important;
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25) !important;
+      box-shadow: 0 4px 12px rgba(26, 37, 48, 0.25) !important;
     }
     /* Lightbox Modal */
     .lightbox-modal {
@@ -126,7 +126,7 @@
     }
   </style>
 </head>
-<body class="antialiased font-sans min-h-screen flex flex-col selection:bg-emerald-100 selection:text-emerald-900">
+<body class="antialiased font-sans min-h-screen flex flex-col selection:bg-slate-200 selection:text-slate-900">
 
   <!-- TopNavBar Component (Transparent at top, Solid on scroll) -->
   <header class="fixed top-0 w-full z-50 transition-all duration-300" id="main-nav">
@@ -160,22 +160,22 @@
     <!-- Mobile Push-Down Nav (Collapsible, pushes content) -->
     <div class="lg:hidden overflow-hidden transition-all duration-300 ease-in-out" id="mobile-dropdown" style="max-height:0;">
       <nav class="flex flex-col bg-white/95 backdrop-blur-sm px-margin-mobile py-2">
-        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-emerald-50 transition-all" href="#work">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-[#1A2530]/10 transition-all" href="#work">
           <span class="material-symbols-outlined text-sm text-primary">work</span> Work
         </a>
-        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-emerald-50 transition-all" href="#about">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-[#1A2530]/10 transition-all" href="#about">
           <span class="material-symbols-outlined text-sm text-primary">person</span> About
         </a>
-        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-emerald-50 transition-all" href="#skills">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-[#1A2530]/10 transition-all" href="#skills">
           <span class="material-symbols-outlined text-sm text-primary">construction</span> Skills
         </a>
-        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-emerald-50 transition-all" href="#certificates">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-[#1A2530]/10 transition-all" href="#certificates">
           <span class="material-symbols-outlined text-sm text-primary">workspace_premium</span> Certificates
         </a>
-        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-emerald-50 transition-all" href="#services">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-[#1A2530]/10 transition-all" href="#services">
           <span class="material-symbols-outlined text-sm text-primary">design_services</span> Services
         </a>
-        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-emerald-50 transition-all" href="#contact">
+        <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg font-headline text-xs font-semibold text-on-surface-variant hover:text-primary hover:bg-[#1A2530]/10 transition-all" href="#contact">
           <span class="material-symbols-outlined text-sm text-primary">mail</span> Contact
         </a>
         <a class="inline-flex items-center justify-center gap-1.5 w-full mt-1 px-3 py-2.5 bg-primary text-on-primary rounded-lg font-headline text-[10px] font-semibold tracking-wider uppercase soft-shadow hover:bg-primary-dark transition-all" href="#contact">
@@ -195,7 +195,7 @@
         <!-- Left: Text Content -->
         <div class="lg:col-span-7 flex flex-col gap-3.5 sm:gap-4 order-2 lg:order-1">
           <h1 class="font-headline text-3xl sm:text-4xl lg:text-[2.6rem] xl:text-5xl 2xl:text-[3.4rem] font-bold text-dark-charcoal leading-tight tracking-tight mb-1">
-            Designing clarity, <span class="text-emerald-600">artistic precision</span> & impact.
+            Designing clarity, <span class="text-[#1A2530]">artistic precision</span> & impact.
           </h1>
 
           <div class="flex flex-wrap gap-3 pt-1">
@@ -210,15 +210,15 @@
           <!-- Quick Stats -->
           <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-2 max-w-lg">
             <div>
-              <div class="font-headline text-xl sm:text-2xl font-bold text-emerald-600">250+</div>
+              <div class="font-headline text-xl sm:text-2xl font-bold text-[#1A2530]">250+</div>
               <div class="font-headline text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-0.5">Projects Completed</div>
             </div>
             <div>
-              <div class="font-headline text-xl sm:text-2xl font-bold text-emerald-600">99%</div>
+              <div class="font-headline text-xl sm:text-2xl font-bold text-[#1A2530]">99%</div>
               <div class="font-headline text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-0.5">Client Satisfaction</div>
             </div>
             <div>
-              <div class="font-headline text-xl sm:text-2xl font-bold text-emerald-600">5+</div>
+              <div class="font-headline text-xl sm:text-2xl font-bold text-[#1A2530]">5+</div>
               <div class="font-headline text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-0.5">Years Experience</div>
             </div>
           </div>
@@ -294,12 +294,12 @@
             </div>
             <div class="flex flex-col gap-0.5">
               <h2 class="font-headline text-base font-bold text-dark-charcoal leading-tight">Khoiruman</h2>
-              <p class="font-headline text-[11px] text-emerald-600 font-semibold">Creative Designer & Vector Specialist</p>
+              <p class="font-headline text-[11px] text-[#1A2530] font-semibold">Creative Designer & Vector Specialist</p>
               <div class="flex items-center gap-1.5 mt-1">
-                <span class="inline-flex items-center gap-1 text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                <span class="inline-flex items-center gap-1 text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">
                   <span class="material-symbols-outlined text-[10px]">palette</span> Illustration
                 </span>
-                <span class="inline-flex items-center gap-1 text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                <span class="inline-flex items-center gap-1 text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">
                   <span class="material-symbols-outlined text-[10px]">draw</span> Vector Art
                 </span>
               </div>
@@ -312,7 +312,7 @@
             
             <!-- Overlay Badges (Desktop only) -->
             <div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md rounded-xl p-2.5 shadow-md flex items-center gap-2.5">
-              <span class="material-symbols-outlined text-emerald-600 text-xl">palette</span>
+              <span class="material-symbols-outlined text-[#1A2530] text-xl">palette</span>
               <div>
                 <div class="font-headline text-[11px] font-bold text-dark-charcoal">Creative Designer</div>
                 <div class="font-headline text-[9px] text-on-surface-variant">Illustration & Branding</div>
@@ -320,7 +320,7 @@
             </div>
 
             <div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-md rounded-xl p-2.5 shadow-md flex items-center gap-2.5">
-              <span class="material-symbols-outlined text-emerald-600 text-xl">draw</span>
+              <span class="material-symbols-outlined text-[#1A2530] text-xl">draw</span>
               <div>
                 <div class="font-headline text-[11px] font-bold text-dark-charcoal">Vector Specialist</div>
                 <div class="font-headline text-[9px] text-on-surface-variant">High Precision Detail</div>
@@ -329,7 +329,7 @@
           </div>
 
           <!-- Decorative Ambient Blur (Desktop only) -->
-          <div class="hidden lg:block absolute -bottom-6 -left-6 w-48 h-48 bg-emerald-200 rounded-full opacity-40 -z-10 blur-3xl"></div>
+          <div class="hidden lg:block absolute -bottom-6 -left-6 w-48 h-48 bg-slate-300 rounded-full opacity-40 -z-10 blur-3xl"></div>
         </div>
       </div>
       <a href="#work" class="hero-scroll-down" aria-label="Scroll down">
@@ -343,7 +343,7 @@
     <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap" id="work">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
         <div>
-          <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-2">Portfolio</span>
+          <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-2">Portfolio</span>
           <h2 class="font-headline text-3xl md:text-4xl font-bold text-dark-charcoal">Selected Works</h2>
         </div>
 
@@ -371,13 +371,13 @@
               Your browser does not support HTML5 video.
             </video>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-play"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Motion Graphics & Logo</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Motion Graphics & Logo</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Animated Motion Logo</h3>
             <p class="font-body text-xs text-on-surface-variant">Cinematic motion logo animation and dynamic visual brand identity.</p>
           </div>
@@ -388,13 +388,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 1" src="jersey/1 (1).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #1</h3>
             <p class="font-body text-xs text-on-surface-variant">High-precision bespoke sportswear and athletic apparel pattern design.</p>
           </div>
@@ -405,13 +405,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 2" src="jersey/1 (2).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #2</h3>
             <p class="font-body text-xs text-on-surface-variant">Sublimation-ready athletic jersey mockup with sharp technical fidelity.</p>
           </div>
@@ -422,13 +422,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 3" src="jersey/1 (3).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #3</h3>
             <p class="font-body text-xs text-on-surface-variant">Modern and dynamic team sportswear jersey concept.</p>
           </div>
@@ -439,13 +439,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 4" src="jersey/1 (4).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #4</h3>
             <p class="font-body text-xs text-on-surface-variant">Custom football and futsal jersey pattern layout.</p>
           </div>
@@ -456,13 +456,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 5" src="jersey/1 (5).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #5</h3>
             <p class="font-body text-xs text-on-surface-variant">Rancangan grafis pakaian olahraga berkarakter.</p>
           </div>
@@ -473,13 +473,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 6" src="jersey/1 (6).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #6</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain jersey esports & komunitas olahraga.</p>
           </div>
@@ -490,13 +490,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 7" src="jersey/1 (7).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #7</h3>
             <p class="font-body text-xs text-on-surface-variant">Kombinasi warna & ilustrasi jersey atletik.</p>
           </div>
@@ -507,13 +507,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 8" src="jersey/1 (8).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #8</h3>
             <p class="font-body text-xs text-on-surface-variant">Mockup jersey sepeda & lari profesional.</p>
           </div>
@@ -524,13 +524,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 9" src="jersey/1 (9).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #9</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain jersey latihan & turnamen kustom.</p>
           </div>
@@ -541,13 +541,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 10" src="jersey/1 (10).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #10</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain apparel percetakan jersey berkualitas.</p>
           </div>
@@ -558,13 +558,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 11" src="jersey/1 (11).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #11</h3>
             <p class="font-body text-xs text-on-surface-variant">Artwork pola & elemen visual jersey kustom.</p>
           </div>
@@ -575,13 +575,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 12" src="jersey/1 (12).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #12</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain jersey gaya atletik modern.</p>
           </div>
@@ -592,13 +592,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 13" src="jersey/1 (13).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #13</h3>
             <p class="font-body text-xs text-on-surface-variant">Tata letak grafis cetak jersey presisi.</p>
           </div>
@@ -609,13 +609,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 14" src="jersey/1 (14).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #14</h3>
             <p class="font-body text-xs text-on-surface-variant">High-contrast athletic sportswear jersey design.</p>
           </div>
@@ -626,13 +626,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jersey Design 15" src="jersey/1 (15).webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Jersey & Apparel</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Jersey & Apparel</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Sport Jersey Design #15</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain jersey kustom berkualitas tinggi.</p>
           </div>
@@ -643,13 +643,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Book Cover 1" src="book cover & illustration/book 1 top.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Fantasy Novel Cover Design</h3>
             <p class="font-body text-xs text-on-surface-variant">Ilustrasi sampul novel bertema cerita fantasi modern.</p>
           </div>
@@ -660,13 +660,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Book Cover 2" src="book cover & illustration/book 2.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Editorial Novel Cover</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain sampul buku bacaan fiksi berkualitas tinggi.</p>
           </div>
@@ -677,13 +677,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Book Cover 3" src="book cover & illustration/book 3.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Storybook Series Illustration</h3>
             <p class="font-body text-xs text-on-surface-variant">Ilustrasi karakter dan cerita bergambar.</p>
           </div>
@@ -694,13 +694,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Illustration Masterpiece" src="book cover & illustration/illustartion top.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Masterpiece Fantasy Artwork</h3>
             <p class="font-body text-xs text-on-surface-variant">Karya art ilustrasi fantasi berdetail tinggi.</p>
           </div>
@@ -711,13 +711,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Character Art Illustration" src="book cover & illustration/illustartion 2.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Character Art Illustration #2</h3>
             <p class="font-body text-xs text-on-surface-variant">Digital character artwork with dramatic cinematic lighting.</p>
           </div>
@@ -728,13 +728,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Digital Painting Scene" src="book cover & illustration/illustartion 3.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Digital Painting Scene #3</h3>
             <p class="font-body text-xs text-on-surface-variant">Lukisan digital pemandangan dan imajinatif.</p>
           </div>
@@ -745,13 +745,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Fantasy Artwork" src="book cover & illustration/illustartion 4.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Book & Illustration</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Book & Illustration</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Fantasy Storybook Artwork #4</h3>
             <p class="font-body text-xs text-on-surface-variant">Ilustrasi cerita bertema petualangan fantasi.</p>
           </div>
@@ -762,13 +762,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Human Vector 1" src="human potrait/cartoon vektor portrait.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Human Vector</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Human Vector</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Cartoon Vector Portrait #1</h3>
             <p class="font-body text-xs text-on-surface-variant">Seni ilustrasi kartun vektor wajah presisi.</p>
           </div>
@@ -779,13 +779,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Human Vector 2" src="human potrait/cartoon vektor portrait 2.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Human Vector</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Human Vector</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Cartoon Vector Portrait #2</h3>
             <p class="font-body text-xs text-on-surface-variant">Portret karakter berdetail garis vektor tajam.</p>
           </div>
@@ -796,13 +796,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 1" src="pet potrait/instagram pawpowa porto 2 top.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #1</h3>
             <p class="font-body text-xs text-on-surface-variant">Seni portrait hewan peliharaan gaya Pawpowa.</p>
           </div>
@@ -813,13 +813,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 2" src="pet potrait/instagram pawpowa porto 1.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #2</h3>
             <p class="font-body text-xs text-on-surface-variant">Charming and adorable custom pet portrait illustration.</p>
           </div>
@@ -830,13 +830,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 3" src="pet potrait/instagram pawpowa porto 3.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #3</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain vektor hewan peliharaan berkarakter unik.</p>
           </div>
@@ -847,13 +847,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 4" src="pet potrait/instagram pawpowa porto 4.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #4</h3>
             <p class="font-body text-xs text-on-surface-variant">Seni portrait kucing & anjing kustom Pawpowa.</p>
           </div>
@@ -864,13 +864,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 5" src="pet potrait/instagram pawpowa porto 5.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #5</h3>
             <p class="font-body text-xs text-on-surface-variant">Ilustrasi vektor hewan peliharaan bertekstur halus.</p>
           </div>
@@ -881,13 +881,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 6" src="pet potrait/instagram pawpowa porto 6.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #6</h3>
             <p class="font-body text-xs text-on-surface-variant">Karakter kartun hewan ekspresif dan menggemaskan.</p>
           </div>
@@ -898,13 +898,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 7" src="pet potrait/instagram pawpowa porto 7.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #7</h3>
             <p class="font-body text-xs text-on-surface-variant">Artwork hewan favorit bernuansa warna hangat.</p>
           </div>
@@ -915,13 +915,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 8" src="pet potrait/instagram pawpowa porto 8.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #8</h3>
             <p class="font-body text-xs text-on-surface-variant">Seni ilustrasi digital hewan berdetail teliti.</p>
           </div>
@@ -932,13 +932,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 9" src="pet potrait/instagram pawpowa porto 9.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #9</h3>
             <p class="font-body text-xs text-on-surface-variant">Portret vektor kartun hewan penuh warna.</p>
           </div>
@@ -949,13 +949,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 10" src="pet potrait/instagram pawpowa porto 10.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #10</h3>
             <p class="font-body text-xs text-on-surface-variant">Ilustrasi vektor hewan peliharaan manis.</p>
           </div>
@@ -966,13 +966,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 11" src="pet potrait/instagram pawpowa porto 11.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #11</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain seni vektor hewan berkarakter kuat.</p>
           </div>
@@ -983,13 +983,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 13" src="pet potrait/instagram pawpowa porto 13.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #13</h3>
             <p class="font-body text-xs text-on-surface-variant">Portret hewan kesayangan khas Pawpowa.</p>
           </div>
@@ -1000,13 +1000,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 14" src="pet potrait/instagram pawpowa porto 14.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #14</h3>
             <p class="font-body text-xs text-on-surface-variant">Seni grafis hewan peliharaan berkualitas tinggi.</p>
           </div>
@@ -1017,13 +1017,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pet Portrait 15" src="pet potrait/instagram pawpowa porto 15.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Pet Portrait</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Pet Portrait</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Pawpowa Pet Vector #15</h3>
             <p class="font-body text-xs text-on-surface-variant">Aesthetic vector animal character artwork.</p>
           </div>
@@ -1034,13 +1034,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Jaya Abadi Gold Logo" src="socila media/Jaya Abadi Gold logo top.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Branding & Logo</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Branding & Logo</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Jaya Abadi Gold Identity</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain logo & branding visual toko emas eksklusif.</p>
           </div>
@@ -1051,13 +1051,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="VISTARA Logo Preview" src="socila media/VISTARA LOGO prev.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Branding & Logo</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Branding & Logo</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Vistara Brand Logo Preview</h3>
             <p class="font-body text-xs text-on-surface-variant">Identitas merek modern dan tipografi minimalis.</p>
           </div>
@@ -1068,13 +1068,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="iDoctor Medical Branding" src="socila media/idoctor PREVIEW.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Branding & Logo</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Branding & Logo</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">iDoctor Medical Branding</h3>
             <p class="font-body text-xs text-on-surface-variant">Desain aset visual & branding aplikasi kesehatan digital.</p>
           </div>
@@ -1085,13 +1085,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Vehicle Vector 1" src="vehicle potrait/CAR VECTOR 2 top.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Vehicle Vector</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Vehicle Vector</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Car Vector Art #1</h3>
             <p class="font-body text-xs text-on-surface-variant">Ilustrasi kartun vektor kendaraan otomotif.</p>
           </div>
@@ -1102,13 +1102,13 @@
           <div class="aspect-[4/3] overflow-hidden relative bg-surface-container">
             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Vehicle Vector 2" src="vehicle potrait/CAR VECTOR 3.webp"/>
             <div class="absolute inset-0 bg-dark-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base shadow-md">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530] text-white flex items-center justify-center text-base shadow-md">
                 <i class="fas fa-search-plus"></i>
               </span>
             </div>
           </div>
           <div class="p-6">
-            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Vehicle Vector</span>
+            <span class="font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Vehicle Vector</span>
             <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Car Vector Art #2</h3>
             <p class="font-body text-xs text-on-surface-variant">Custom vector vehicle illustration with precise shading.</p>
           </div>
@@ -1124,7 +1124,7 @@
         <!-- Top Row: Philosophy & Bio -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 items-stretch">
           <div class="bg-surface p-6 sm:p-8 rounded-2xl ambient-shadow flex flex-col justify-center">
-            <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-2">Philosophy & Readiness</span>
+            <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-2">Philosophy & Readiness</span>
             <h3 class="font-headline text-2xl sm:text-3xl font-bold text-dark-charcoal mb-4">
               Human Craftsmanship & Industry Readiness.
             </h3>
@@ -1138,10 +1138,10 @@
 
           <!-- Specialization Highlights (Neumorphic Bento Cards) -->
           <div class="flex flex-col gap-3.5 justify-between">
-            <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-0.5">Core Capabilities</span>
+            <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-0.5">Core Capabilities</span>
             
             <div class="bg-surface p-3.5 rounded-xl ambient-shadow flex items-start gap-3.5 transition-transform duration-300 hover:-translate-y-1">
-              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-[#1A2530]/10 text-[#1A2530] flex items-center justify-center flex-shrink-0 shadow-sm">
                 <span class="material-symbols-outlined text-lg">verified</span>
               </div>
               <div>
@@ -1151,7 +1151,7 @@
             </div>
 
             <div class="bg-surface p-3.5 rounded-xl ambient-shadow flex items-start gap-4 transition-transform duration-300 hover:-translate-y-1">
-              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-[#1A2530]/10 text-[#1A2530] flex items-center justify-center flex-shrink-0 shadow-sm">
                 <span class="material-symbols-outlined text-lg">checkroom</span>
               </div>
               <div>
@@ -1161,7 +1161,7 @@
             </div>
 
             <div class="bg-surface p-3.5 rounded-xl ambient-shadow flex items-start gap-4 transition-transform duration-300 hover:-translate-y-1">
-              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-[#1A2530]/10 text-[#1A2530] flex items-center justify-center flex-shrink-0 shadow-sm">
                 <span class="material-symbols-outlined text-lg">videocam</span>
               </div>
               <div>
@@ -1171,7 +1171,7 @@
             </div>
 
             <div class="bg-surface p-3.5 rounded-xl ambient-shadow flex items-start gap-4 transition-transform duration-300 hover:-translate-y-1">
-              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-[#1A2530]/10 text-[#1A2530] flex items-center justify-center flex-shrink-0 shadow-sm">
                 <span class="material-symbols-outlined text-lg">aspect_ratio</span>
               </div>
               <div>
@@ -1184,40 +1184,40 @@
 
         <!-- Bottom Row: Work Experience Timeline -->
         <div class="pt-12">
-          <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-8 text-center sm:text-left">Work Experience · Pengalaman Kerja</span>
+          <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-8 text-center sm:text-left">Work Experience · Pengalaman Kerja</span>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <!-- Item 1 -->
             <div class="bg-surface p-6 rounded-xl ambient-shadow relative group transition-colours duration-300">
               <div class="flex items-center gap-2 mb-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-                <span class="font-headline text-xs font-semibold text-emerald-700 uppercase tracking-wider">2022 - 2025</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#1A2530]"></span>
+                <span class="font-headline text-xs font-semibold text-[#1A2530] uppercase tracking-wider">2022 - 2025</span>
               </div>
               <h4 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Desainer Jersey</h4>
-              <p class="font-headline text-xs font-medium text-emerald-800 mb-2">Percetakan Jersey Semarang</p>
+              <p class="font-headline text-xs font-medium text-[#1A2530] mb-2">Percetakan Jersey Semarang</p>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed">Merancang pola visual, mockup apparel, dan layout percetakan jersey olahraga kustom.</p>
             </div>
 
             <!-- Item 2 -->
             <div class="bg-surface p-6 rounded-xl ambient-shadow relative group transition-colours duration-300">
               <div class="flex items-center gap-2 mb-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-                <span class="font-headline text-xs font-semibold text-emerald-700 uppercase tracking-wider">2021 - 2026</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#1A2530]"></span>
+                <span class="font-headline text-xs font-semibold text-[#1A2530] uppercase tracking-wider">2021 - 2026</span>
               </div>
               <h4 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Project Remote Frame Design</h4>
-              <p class="font-headline text-xs font-medium text-emerald-800 mb-2">Percetakan Frame</p>
+              <p class="font-headline text-xs font-medium text-[#1A2530] mb-2">Percetakan Frame</p>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed">Remote visual design production for bespoke photo frames and wall art décor.</p>
             </div>
 
             <!-- Item 3 -->
             <div class="bg-surface p-6 rounded-xl ambient-shadow relative group transition-colours duration-300">
               <div class="flex items-center gap-2 mb-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
-                <span class="font-headline text-xs font-semibold text-emerald-700 uppercase tracking-wider">2021 - Present</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#1A2530] animate-pulse"></span>
+                <span class="font-headline text-xs font-semibold text-[#1A2530] uppercase tracking-wider">2021 - Present</span>
               </div>
               <h4 class="font-headline text-lg font-bold text-dark-charcoal mb-1">Freelance Fantasy & Vector Illustrator</h4>
-              <p class="font-headline text-xs font-medium text-emerald-800 mb-2">Silhouetted Fantasy Art</p>
+              <p class="font-headline text-xs font-medium text-[#1A2530] mb-2">Silhouetted Fantasy Art</p>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed">Created high-end fantasy digital illustrations, silhouette character art, and bespoke vector assets for global clients.</p>
             </div>
 
@@ -1230,7 +1230,7 @@
     <!-- Software Tools & Skills Section -->
     <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap" id="skills">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-2">Software & Expertise</span>
+        <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-2">Software & Expertise</span>
         <h2 class="font-headline text-3xl font-bold text-dark-charcoal">Core Creative Tools</h2>
       </div>
 
@@ -1297,7 +1297,7 @@
     <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap" id="certificates">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
         <div>
-          <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-2">Credentials & Certifications</span>
+          <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-2">Credentials & Certifications</span>
           <h2 class="font-headline text-3xl md:text-4xl font-bold text-dark-charcoal">Certifications & Credentials</h2>
         </div>
         <p class="font-body text-xs md:text-sm text-on-surface-variant max-w-md">
@@ -1313,18 +1313,18 @@
             <div class="aspect-[16/11] p-3 sm:p-4 bg-surface-container/60 overflow-hidden relative flex items-center justify-center">
               <img class="w-full h-full object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" alt="Social Media Marketing II Certificate" src="social-media-marketing-II-Certified.webp"/>
               <div class="absolute inset-0 bg-dark-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 backdrop-blur-[1px]">
-                <span class="px-4 py-2 rounded-full bg-emerald-600 text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="px-4 py-2 rounded-full bg-[#1A2530] text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <i class="fas fa-search-plus"></i> View Certificate
                 </span>
               </div>
               <div class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
-                <span class="material-symbols-outlined text-[11px] text-emerald-600">verified</span>
-                <span class="font-headline text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Certified</span>
+                <span class="material-symbols-outlined text-[11px] text-[#1A2530]">verified</span>
+                <span class="font-headline text-[9px] font-bold text-[#1A2530] uppercase tracking-wider">Certified</span>
               </div>
             </div>
             <div class="p-6">
-              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Digital Marketing & Strategy</span>
-              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-emerald-700 transition-colours">Social Media Marketing II</h3>
+              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Digital Marketing & Strategy</span>
+              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-[#1A2530] transition-colours">Social Media Marketing II</h3>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">
                 Comprehensive certification in advanced digital marketing strategies, visual content optimisation, campaign management, and audience performance analytics.
               </p>
@@ -1332,11 +1332,11 @@
           </div>
           <div class="px-6 pb-6 pt-0 flex flex-wrap gap-1.5 items-center justify-between">
             <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Social Strategy</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Content Marketing</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Campaign Growth</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Social Strategy</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Content Marketing</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Campaign Growth</span>
             </div>
-            <span class="mt-3 text-emerald-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span class="mt-3 text-[#1A2530] text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Preview <i class="fas fa-arrow-right text-[10px]"></i>
             </span>
           </div>
@@ -1348,18 +1348,18 @@
             <div class="aspect-[16/11] p-3 sm:p-4 bg-surface-container/60 overflow-hidden relative flex items-center justify-center">
               <img class="w-full h-full object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" alt="Data Standardisation Certificate" src="XLTEST-STANDARISASI-HURUF-PADAD-DATA.webp"/>
               <div class="absolute inset-0 bg-dark-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 backdrop-blur-[1px]">
-                <span class="px-4 py-2 rounded-full bg-emerald-600 text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="px-4 py-2 rounded-full bg-[#1A2530] text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <i class="fas fa-search-plus"></i> View Certificate
                 </span>
               </div>
               <div class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
-                <span class="material-symbols-outlined text-[11px] text-emerald-600">verified</span>
-                <span class="font-headline text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Excel Test</span>
+                <span class="material-symbols-outlined text-[11px] text-[#1A2530]">verified</span>
+                <span class="font-headline text-[9px] font-bold text-[#1A2530] uppercase tracking-wider">Excel Test</span>
               </div>
             </div>
             <div class="p-6">
-              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Data Cleansing & Formatting</span>
-              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-emerald-700 transition-colours">Text & Data Standardisation</h3>
+              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Data Cleansing & Formatting</span>
+              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-[#1A2530] transition-colours">Text & Data Standardisation</h3>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">
                 Certified mastery in data cleansing, text standardisation techniques (UPPER, LOWER, PROPER, TRIM, CLEAN), and database formatting integrity.
               </p>
@@ -1367,11 +1367,11 @@
           </div>
           <div class="px-6 pb-6 pt-0 flex flex-wrap gap-1.5 items-center justify-between">
             <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Text Formatting</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Data Cleansing</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">PROPER / TRIM</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Text Formatting</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Data Cleansing</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">PROPER / TRIM</span>
             </div>
-            <span class="mt-3 text-emerald-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span class="mt-3 text-[#1A2530] text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Preview <i class="fas fa-arrow-right text-[10px]"></i>
             </span>
           </div>
@@ -1383,18 +1383,18 @@
             <div class="aspect-[16/11] p-3 sm:p-4 bg-surface-container/60 overflow-hidden relative flex items-center justify-center">
               <img class="w-full h-full object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" alt="VLOOKUP & HLOOKUP Certificate" src="XLTEST-VLOOKUP&HLOOKUP.webp"/>
               <div class="absolute inset-0 bg-dark-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 backdrop-blur-[1px]">
-                <span class="px-4 py-2 rounded-full bg-emerald-600 text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="px-4 py-2 rounded-full bg-[#1A2530] text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <i class="fas fa-search-plus"></i> View Certificate
                 </span>
               </div>
               <div class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
-                <span class="material-symbols-outlined text-[11px] text-emerald-600">verified</span>
-                <span class="font-headline text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Excel Test</span>
+                <span class="material-symbols-outlined text-[11px] text-[#1A2530]">verified</span>
+                <span class="font-headline text-[9px] font-bold text-[#1A2530] uppercase tracking-wider">Excel Test</span>
               </div>
             </div>
             <div class="p-6">
-              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Lookup & Reference Mastery</span>
-              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-emerald-700 transition-colours">VLOOKUP & HLOOKUP</h3>
+              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Lookup & Reference Mastery</span>
+              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-[#1A2530] transition-colours">VLOOKUP & HLOOKUP</h3>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">
                 Advanced certification in cross-tabular data querying and relational dataset indexing using combined VLOOKUP and HLOOKUP algorithms.
               </p>
@@ -1402,11 +1402,11 @@
           </div>
           <div class="px-6 pb-6 pt-0 flex flex-wrap gap-1.5 items-center justify-between">
             <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">VLOOKUP</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">HLOOKUP</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Table Referencing</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">VLOOKUP</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">HLOOKUP</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Table Referencing</span>
             </div>
-            <span class="mt-3 text-emerald-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span class="mt-3 text-[#1A2530] text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Preview <i class="fas fa-arrow-right text-[10px]"></i>
             </span>
           </div>
@@ -1418,18 +1418,18 @@
             <div class="aspect-[16/11] p-3 sm:p-4 bg-surface-container/60 overflow-hidden relative flex items-center justify-center">
               <img class="w-full h-full object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" alt="VLOOKUP Function Certificate" src="XLTEST-VLOOKUP.webp"/>
               <div class="absolute inset-0 bg-dark-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 backdrop-blur-[1px]">
-                <span class="px-4 py-2 rounded-full bg-emerald-600 text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="px-4 py-2 rounded-full bg-[#1A2530] text-white font-headline text-xs font-semibold flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <i class="fas fa-search-plus"></i> View Certificate
                 </span>
               </div>
               <div class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
-                <span class="material-symbols-outlined text-[11px] text-emerald-600">verified</span>
-                <span class="font-headline text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Excel Test</span>
+                <span class="material-symbols-outlined text-[11px] text-[#1A2530]">verified</span>
+                <span class="font-headline text-[9px] font-bold text-[#1A2530] uppercase tracking-wider">Excel Test</span>
               </div>
             </div>
             <div class="p-6">
-              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-emerald-700 block mb-1">Data Analysis & Matching</span>
-              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-emerald-700 transition-colours">VLOOKUP Function Analysis</h3>
+              <span class="cert-category font-headline text-[10px] font-semibold uppercase tracking-wider text-[#1A2530] block mb-1">Data Analysis & Matching</span>
+              <h3 class="font-headline text-lg font-bold text-dark-charcoal mb-2 group-hover:text-[#1A2530] transition-colours">VLOOKUP Function Analysis</h3>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">
                 Professional certification in VLOOKUP formula engineering, multi-sheet reconciliation, dataset auditing, and automated reporting.
               </p>
@@ -1437,11 +1437,11 @@
           </div>
           <div class="px-6 pb-6 pt-0 flex flex-wrap gap-1.5 items-center justify-between">
             <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">VLOOKUP Function</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Data Matching</span>
-              <span class="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Report Automation</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">VLOOKUP Function</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Data Matching</span>
+              <span class="text-[9px] font-semibold text-[#1A2530] bg-[#1A2530]/10 px-2 py-0.5 rounded-full">Report Automation</span>
             </div>
-            <span class="mt-3 text-emerald-600 text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <span class="mt-3 text-[#1A2530] text-xs font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Preview <i class="fas fa-arrow-right text-[10px]"></i>
             </span>
           </div>
@@ -1454,14 +1454,14 @@
     <section class="bg-surface-container-lowest py-10 sm:py-16 lg:py-20 mb-section-gap" id="services">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
-          <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase block mb-2">Services</span>
+          <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase block mb-2">Services</span>
           <h2 class="font-headline text-3xl font-bold text-dark-charcoal">Design Services</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6">
           
           <div class="bg-surface p-3.5 sm:p-6 lg:p-8 rounded-xl ambient-shadow flex flex-col justify-start">
-            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-emerald-600 mb-2 sm:mb-4 lg:mb-6">design_services</span>
+            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-[#1A2530] mb-2 sm:mb-4 lg:mb-6">design_services</span>
             <h3 class="font-headline text-xs sm:text-base lg:text-xl font-bold text-dark-charcoal mb-1 sm:mb-2 lg:mb-3">Human & Vehicle Vector</h3>
             <p class="font-body text-[11px] sm:text-xs lg:text-sm text-on-surface-variant leading-relaxed">
               High-precision vector illustrations of people and vehicles, crafted with meticulous detail and print-ready fidelity.
@@ -1469,7 +1469,7 @@
           </div>
 
           <div class="bg-surface p-3.5 sm:p-6 lg:p-8 rounded-xl ambient-shadow flex flex-col justify-start">
-            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-emerald-600 mb-2 sm:mb-4 lg:mb-6">pets</span>
+            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-[#1A2530] mb-2 sm:mb-4 lg:mb-6">pets</span>
             <h3 class="font-headline text-xs sm:text-base lg:text-xl font-bold text-dark-charcoal mb-1 sm:mb-2 lg:mb-3">Pet Portrait (Pawpowa)</h3>
             <p class="font-body text-[11px] sm:text-xs lg:text-sm text-on-surface-variant leading-relaxed">
               Specialist pet portraiture capturing beloved animal companions with distinctive artistic charm and character.
@@ -1477,7 +1477,7 @@
           </div>
 
           <div class="bg-surface p-3.5 sm:p-6 lg:p-8 rounded-xl ambient-shadow flex flex-col justify-start">
-            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-emerald-600 mb-2 sm:mb-4 lg:mb-6">menu_book</span>
+            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-[#1A2530] mb-2 sm:mb-4 lg:mb-6">menu_book</span>
             <h3 class="font-headline text-xs sm:text-base lg:text-xl font-bold text-dark-charcoal mb-1 sm:mb-2 lg:mb-3">Book Cover & Branding</h3>
             <p class="font-body text-[11px] sm:text-xs lg:text-sm text-on-surface-variant leading-relaxed">
               Striking book covers and cohesive brand identity systems designed to captivate audiences and endure.
@@ -1485,7 +1485,7 @@
           </div>
 
           <div class="bg-surface p-3.5 sm:p-6 lg:p-8 rounded-xl ambient-shadow flex flex-col justify-start">
-            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-emerald-600 mb-2 sm:mb-4 lg:mb-6">videocam</span>
+            <span class="material-symbols-outlined text-2xl sm:text-3xl lg:text-4xl text-[#1A2530] mb-2 sm:mb-4 lg:mb-6">videocam</span>
             <h3 class="font-headline text-xs sm:text-base lg:text-xl font-bold text-dark-charcoal mb-1 sm:mb-2 lg:mb-3">Video Editing & Motion</h3>
             <p class="font-body text-[11px] sm:text-xs lg:text-sm text-on-surface-variant leading-relaxed">
               Creative short-form video editing, kinetic motion graphics, and engaging social content tailored for high engagement.
@@ -1501,15 +1501,15 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
         
         <div class="lg:col-span-5 flex flex-col gap-6">
-          <span class="font-headline text-xs font-semibold tracking-widest text-emerald-700 uppercase">Contact</span>
+          <span class="font-headline text-xs font-semibold tracking-widest text-[#1A2530] uppercase">Contact</span>
           <h2 class="font-headline text-3xl sm:text-4xl font-bold text-dark-charcoal">Let's Collaborate On Your Next Project</h2>
           <p class="font-body text-base text-on-surface-variant leading-relaxed">
             Have an illustration concept or require bespoke visual design for your brand? Get in touch via the form or direct channels below.
           </p>
 
           <div class="flex flex-col gap-4 pt-4">
-            <a class="flex items-center gap-4 p-4 bg-surface rounded-xl transition-colours hover:text-emerald-700" href="mailto:mamankhoiruman9@gmail.com">
-              <span class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+            <a class="flex items-center gap-4 p-4 bg-surface rounded-xl transition-colours hover:text-[#1A2530]" href="mailto:mamankhoiruman9@gmail.com">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530]/10 text-[#1A2530] flex items-center justify-center text-lg">
                 <i class="fas fa-envelope"></i>
               </span>
               <div>
@@ -1518,8 +1518,8 @@
               </div>
             </a>
 
-            <a class="flex items-center gap-4 p-4 bg-surface rounded-xl transition-colours hover:text-emerald-700" href="https://wa.me/6287834941522" target="_blank" rel="noopener noreferrer">
-              <span class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+            <a class="flex items-center gap-4 p-4 bg-surface rounded-xl transition-colours hover:text-[#1A2530]" href="https://wa.me/6287834941522" target="_blank" rel="noopener noreferrer">
+              <span class="w-10 h-10 rounded-full bg-[#1A2530]/10 text-[#1A2530] flex items-center justify-center text-lg">
                 <i class="fab fa-whatsapp"></i>
               </span>
               <div>
@@ -1535,17 +1535,17 @@
           <form id="contact-form" class="flex flex-col gap-6">
             <div>
               <label for="name" class="font-headline text-xs font-semibold text-dark-charcoal uppercase block mb-2">Full Name</label>
-              <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-sans text-sm" placeholder="Enter your full name"/>
+              <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-primary focus:ring-1 focus:ring-primary transition-all font-sans text-sm" placeholder="Enter your full name"/>
             </div>
 
             <div>
               <label for="email" class="font-headline text-xs font-semibold text-dark-charcoal uppercase block mb-2">Email Address</label>
-              <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-sans text-sm" placeholder="name@email.com"/>
+              <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-primary focus:ring-1 focus:ring-primary transition-all font-sans text-sm" placeholder="name@email.com"/>
             </div>
 
             <div>
               <label for="category" class="font-headline text-xs font-semibold text-dark-charcoal uppercase block mb-2">Kategori Project</label>
-              <select id="category" class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-sans text-sm">
+              <select id="category" class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-primary focus:ring-1 focus:ring-primary transition-all font-sans text-sm">
                 <option value="vector-art">Vector Art (Human / Vehicle)</option>
                 <option value="pet-portrait">Pet Portrait (Pawpowa)</option>
                 <option value="book-cover">Sampul Buku & Ilustrasi</option>
@@ -1555,7 +1555,7 @@
 
             <div>
               <label for="message" class="font-headline text-xs font-semibold text-dark-charcoal uppercase block mb-2">Pesan / Brief Project</label>
-              <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-sans text-sm" placeholder="Tuliskan detail project Anda..."></textarea>
+              <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-background text-dark-charcoal focus:border-primary focus:ring-1 focus:ring-primary transition-all font-sans text-sm" placeholder="Tuliskan detail project Anda..."></textarea>
             </div>
 
             <button type="submit" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-on-primary rounded-lg font-headline text-sm font-semibold tracking-wider uppercase transition-all hover:bg-primary-dark duration-300 soft-shadow">
@@ -1590,7 +1590,7 @@
 
   <!-- Lightbox Modal Popup -->
   <div class="lightbox-modal" id="lightbox-modal">
-    <button class="absolute top-6 right-6 w-12 h-12 rounded-full bg-surface/20 text-white hover:bg-emerald-600 transition-colours flex items-center justify-center text-xl" id="lightbox-close">
+    <button class="absolute top-6 right-6 w-12 h-12 rounded-full bg-surface/20 text-white hover:bg-[#1A2530] transition-colours flex items-center justify-center text-xl" id="lightbox-close">
       <i class="fas fa-times"></i>
     </button>
 
@@ -1598,21 +1598,21 @@
       <img src="" alt="Full Preview" id="lightbox-img" class="max-h-[75vh] max-w-full object-contain rounded-xl shadow-2xl mb-4"/>
       <video id="lightbox-video" autoplay loop muted playsinline class="max-h-[75vh] max-w-full object-contain rounded-xl shadow-2xl mb-4 hidden"></video>
       <h3 class="font-headline text-xl font-bold text-white mb-1" id="lightbox-title">Title</h3>
-      <p class="font-body text-sm text-emerald-400 font-medium" id="lightbox-cat">Category</p>
+      <p class="font-body text-sm text-slate-300 font-medium" id="lightbox-cat">Category</p>
     </div>
   </div>
 
   <!-- Back to Top Floating Button -->
-  <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center transition-all duration-300 transform translate-y-16 opacity-0 pointer-events-none hover:bg-emerald-700 hover:scale-105 active:scale-95 focus:outline-none">
+  <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#1A2530] text-white flex items-center justify-center transition-all duration-300 transform translate-y-16 opacity-0 pointer-events-none hover:bg-[#101820] hover:scale-105 active:scale-95 focus:outline-none">
     <span class="material-symbols-outlined text-xl sm:text-2xl">arrow_upward</span>
   </button>
 
   <!-- Toast Notification -->
-  <div class="fixed bottom-6 right-6 px-6 py-4 bg-emerald-700 text-white rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-500 transform translate-y-32 opacity-0 z-50" id="toast">
+  <div class="fixed bottom-6 right-6 px-6 py-4 bg-[#101820] text-white rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-500 transform translate-y-32 opacity-0 z-50" id="toast">
     <span class="material-symbols-outlined text-2xl">check_circle</span>
     <span class="font-headline text-sm font-medium" id="toast-text">Thank you! Your message has been sent successfully.</span>
   </div>
 
-  <script src="script.js?v=2.0"></script>
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>
