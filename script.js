@@ -265,14 +265,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = contactForm.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
-      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-base">progress_activity</span> Mengirim...';
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-base">progress_activity</span> Sending...';
       btn.disabled = true;
 
       setTimeout(() => {
         btn.innerHTML = originalText;
         btn.disabled = false;
         contactForm.reset();
-        showToast('Terima kasih! Pesan Anda telah terkirim ke Khoiruman.');
+        showToast('Thank you! Your message has been sent to Khoiruman.');
       }, 1000);
     });
   }
