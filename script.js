@@ -188,6 +188,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Certificate Items Click to Lightbox
+  const certItems = document.querySelectorAll('.certificate-item');
+  certItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const imgEl = item.querySelector('img');
+      const title = item.querySelector('h3') ? item.querySelector('h3').textContent : 'Sertifikat Keahlian';
+      const cat = item.querySelector('.cert-category') ? item.querySelector('.cert-category').textContent : 'Sertifikasi';
+
+      if (imgEl) {
+        const imgSrc = imgEl.getAttribute('src');
+        openLightbox(imgSrc, title, cat, false);
+      }
+    });
+  });
+
   const featuredWorkBox = document.getElementById('featured-work-box');
   if (featuredWorkBox) {
     featuredWorkBox.addEventListener('click', () => {

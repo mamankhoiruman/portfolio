@@ -246,7 +246,9 @@ main section:first-of-type .grid-cols-3 {
 /* --- 5. BENTO CARDS & AMBIENT SURFACES --- */
 .ambient-shadow,
 .portfolio-item,
+.certificate-item,
 #skills .bg-surface,
+#certificates .bg-surface,
 #services .bg-surface,
 #about .bg-surface,
 #contact .bg-surface {
@@ -259,7 +261,9 @@ main section:first-of-type .grid-cols-3 {
 
 .ambient-shadow:hover,
 .portfolio-item:hover,
+.certificate-item:hover,
 #skills .bg-surface:hover,
+#certificates .bg-surface:hover,
 #services .bg-surface:hover,
 #about .bg-surface:hover,
 #contact a.bg-surface:hover {
